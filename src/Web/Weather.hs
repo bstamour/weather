@@ -6,13 +6,15 @@ module Web.Weather
        , getConditions
        ) where
 
-import Data.Text
-import Data.Aeson
 import Control.Monad
 import Control.Applicative
-import Network.HTTP
+
+import Data.Text (Text)
+import Data.Aeson
+import Data.ByteString.Lazy.Char8 (pack)
+import Network.HTTP (getResponseBody, simpleHTTP, getRequest)
+
 import qualified Data.HashMap.Strict as H
-import qualified Data.ByteString.Lazy.Char8 as BS
 
 -- | Observation data.
 data Observation =
@@ -56,7 +58,7 @@ getProperty _ _                 = Nothing
 evalJSONRequest :: FromJSON a => String -> IO (Maybe a)
 evalJSONRequest request = do
   body <- getResponseBody <=< simpleHTTP $ getRequest request
-  return . decode $ BS.pack body
+  return . decode $ pack body
 
 -- The query used to get weather conditions.
 conditionsQuery :: String -> String -> String -> String

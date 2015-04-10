@@ -6,6 +6,10 @@ Currently only supports querying for conditions for US-based cities.
 Example usage:
 
 ```
+{-# LANGUAGE RecordWildCards #-}
+
+module Main where
+
 import Web.Weather
 
 mykey :: APIKey

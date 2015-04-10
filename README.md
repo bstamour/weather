@@ -5,7 +5,7 @@ Currently only supports querying for conditions for US-based cities.
 
 Example usage:
 
-```
+```haskell
 {-# LANGUAGE RecordWildCards #-}
 
 module Main where

@@ -32,3 +32,14 @@ main = do
      putStrLn $ "Wind: " ++ obsWind
      putStrLn $ "Feels like: " ++ obsFeelsLike
 ```
+
+Output:
+
+```
+Observation time: Last Updated on April 10, 2:09 PM EDT
+Weather conditions: Partly Cloudy
+Temp: 52.9
+Rel humidity: "60%"
+Wind: From the West at 4.7 MPH
+Feels like: 52.9 F (11.6 C)
+```

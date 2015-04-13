@@ -5,7 +5,7 @@ name:                Weather
 version:             0.1.0.0
 synopsis:            Library for interacting with the Weather Underground JSON API.
 description: Weather is a simple library for interacting with the Weather Underground JSON API. It is not complete, but it may be useful still.
-homepage:            http://bryanstamour.com
+homepage:            https://github.com/bstamour/weather
 license:             BSD3
 license-file:        LICENSE
 author:              Bryan St. Amour

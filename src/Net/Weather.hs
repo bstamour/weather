@@ -1,6 +1,6 @@
 {-# LANGUAGE OverloadedStrings #-}
 
-module Web.Weather
+module Net.Weather
        ( Observation(..)
        , APIKey
        , getConditions

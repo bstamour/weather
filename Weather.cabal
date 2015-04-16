@@ -2,7 +2,7 @@
 -- documentation, see http://haskell.org/cabal/users-guide/
 
 name:                Weather
-version:             0.1.0.2
+version:             0.1.0.4
 synopsis:            Library for interacting with the Weather Underground JSON API.
 description: Weather is a simple library for interacting with the Weather Underground JSON API. It is not complete, but it may be useful still.
 homepage:            https://github.com/bstamour/weather

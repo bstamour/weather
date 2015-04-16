@@ -3,6 +3,8 @@
 module Net.Weather
        ( Observation(..)
        , APIKey
+       , City
+       , State
        , getConditions
        ) where
 
@@ -39,8 +41,14 @@ instance FromJSON Observation where
 -- | API key. Obtain yours at http://wunderground.com.
 type APIKey = String
 
+-- | City name (e.g. Detroit).
+type City = String
+
+-- | State abbreviation (e.g. MI for Michigan).
+type State = String
+
 -- | Get the current weather conditions of a city.
-getConditions :: APIKey -> String -> String -> IO (Maybe Observation)
+getConditions :: APIKey -> City -> State -> IO (Maybe Observation)
 getConditions key city state = do
   obj <- evalJSONRequest $ conditionsQuery key city state
   return $ obj >>= getProperty "current_observation"

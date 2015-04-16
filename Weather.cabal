@@ -2,7 +2,7 @@
 -- documentation, see http://haskell.org/cabal/users-guide/
 
 name:                Weather
-version:             0.1.0.1
+version:             0.1.0.2
 synopsis:            Library for interacting with the Weather Underground JSON API.
 description: Weather is a simple library for interacting with the Weather Underground JSON API. It is not complete, but it may be useful still.
 homepage:            https://github.com/bstamour/weather
@@ -20,11 +20,11 @@ library
   exposed-modules:     Net.Weather
   -- other-modules:
   -- other-extensions:
-  build-depends: base >= 4.7.0.2 && < 5
+  build-depends: base == 4.*
                , HTTP >= 4000.2.12
-               , text >= 1.1.0.1
-               , unordered-containers >= 0.2.5.1
-               , aeson >= 0.8.0.2
-               , bytestring >= 0.10.4.0
+               , text >= 1.1.0
+               , unordered-containers >= 0.2.5
+               , aeson >= 0.8.0
+               , bytestring >= 0.10.4
   hs-source-dirs:      src
   default-language:    Haskell2010
